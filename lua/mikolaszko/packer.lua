@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     })
+    use('beanworks/vim-phpfmt')
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',

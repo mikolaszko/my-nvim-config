@@ -11,7 +11,11 @@ lsp.ensure_installed({
     'pyright',
     'lua_ls',
     'zls',
-    'omnisharp'
+    'omnisharp',
+    'phpactor',
+    'ocamllsp',
+    'html',
+    'elixirls'
 })
 
 local cmp = require('cmp')
@@ -47,7 +51,11 @@ lsp.format_on_save({
         ['rust_analyzer'] = { 'rust' },
         ['gopls'] = { 'go' },
         ['zls'] = { 'c', 'cpp' },
-        ['omnisharp'] = { 'c_sharp' }
+        ['omnisharp'] = { 'c_sharp' },
+        ['phpactor'] = { 'php' },
+        ['ocaml-lsp'] = { 'ocaml' },
+        ['html'] = { 'html' },
+        ['elixirls'] = { 'elixir' }
     }
 })
 
@@ -82,7 +90,6 @@ require('lspconfig').tsserver.setup({
     filetypes = { 'javascript', 'javascriptreact', 'javascript.jsx', 'typescript', 'typescriptreact', 'typescript.tsx' },
     cmd = { "tsserver", "--stdio" },
 })
-
 lsp.setup()
 
 vim.diagnostic.config({
